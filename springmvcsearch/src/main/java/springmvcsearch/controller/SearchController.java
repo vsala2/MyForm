@@ -8,12 +8,6 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class SearchController {
 	
-
-	@RequestMapping("/home")
-	public String home() {
-		System.out.println("Home View");
-		return "home";
-	}
 	
 	@RequestMapping("/search")
 	public RedirectView search(@RequestParam("querybox") String query) {
@@ -30,5 +24,13 @@ public class SearchController {
 		
 		return redirectView;
 	}
+
+	@RequestMapping("/home")
+	public String home() {
+		System.out.println("Home View");
+		return "home";
+	}
+	
+
 
 }
