@@ -1,3 +1,7 @@
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!-- got this online --> 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,10 +19,15 @@
   	<div class="container mt-4">
   	
   		<div class="row">
-  			<div class="col-md-6 offset-md-3">
+  			<div class="col-md-8 offset-md-2">
   				<div class="card">
   					<div class="card-body">
   						<h3 class="text-center">Complex form</h3>
+  						
+  						<div class="alert alert-danger" role="alert">
+  							<!-- we are using form here bcoz taglib prefix is form, student bcoz the name inside modelAttribute is student in formcontroller -->
+						  <form:errors path="student.*"/>
+						</div>
   						<form action="handleform" method="post">
   						
   							<div class="form-group">
@@ -70,6 +79,22 @@
   									<option value="oldstudent">Old Student</option>
   									<option value="newstudent">New Student</option>
   								</select>
+  							</div>
+  							
+  							<div class="card">
+  								<div class="card-body">
+  								
+  									<p>Your Address</p>
+  									
+  									<div class="form-group">
+  										<input name="address.street" type="text" class="form-control" placeholder="Enter Street"/>
+  									</div>
+  									
+  									<div class="form-group">
+  										<input name="address.city" type="text" class="form-control" placeholder="Enter City"/>
+  									</div>
+  								
+  								</div>
   							</div>
   							
   							<div class="container text-center">
