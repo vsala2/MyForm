@@ -16,7 +16,7 @@
   		<h1>Hello, Upload Image</h1>
   		
   		<!-- enctype means the data we are sending the server is multipart type data -->
-  		<form action="uploadimage" method="post" enctype="mutlipart/form-data">
+  		<form action="uploadimage" method="post" enctype="multipart/form-data">
 		  <div class="form-group">
 		    <label for="exampleFormControlFile1">Select Image</label>
 		    <input type="file" name="profile" class="form-control-file" id="exampleFormControlFile1">
