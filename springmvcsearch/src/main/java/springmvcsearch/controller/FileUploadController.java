@@ -47,7 +47,7 @@ public class FileUploadController {
 			System.out.println("File uploaded");
 			
 			m.addAttribute("msg", "Uploaded!!");
-			m.addAttribute("fileName",file.getOriginalFilename());
+			m.addAttribute("fileName",file.getOriginalFilename()); 
 		}catch(IOException e) {
 			e.printStackTrace();
 			System.out.println("Error");
