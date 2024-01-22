@@ -19,7 +19,7 @@ public class SearchController {
 		System.out.println(userName);
 		Integer.parseInt(userName);
 		return "home";
-	}
+	}  
 	
 	@RequestMapping("/home")
 	public String home() {
@@ -45,7 +45,8 @@ public class SearchController {
 		return redirectView;
 	}
 	
-	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+//	FOR Single Controller
+/*	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	@ExceptionHandler(value = NullPointerException.class)
 	public String exceptionHandlerNull(Model m) {
 		m.addAttribute("msg", "Null Pointer Exception!");
@@ -64,5 +65,6 @@ public class SearchController {
 	public String exceptionHandlerGeneric(Model m) {
 		m.addAttribute("msg", "Generic Exception!");
 		return "error_page";
-	}
+	}*/
+	
 }

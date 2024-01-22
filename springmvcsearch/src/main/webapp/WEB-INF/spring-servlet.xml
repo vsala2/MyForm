@@ -28,6 +28,13 @@
 	
 	<!-- configure Multipart Resolver -->
 	<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" name="multipartResolver"/>
-
+	
+	<mvc:interceptors>
+	
+		<mvc:interceptor>
+			<mvc:mapping path="/welcome"/>
+			<bean class="springmvcsearch.entities.MyInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 </beans>
